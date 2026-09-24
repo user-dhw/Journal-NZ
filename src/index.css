@@ -1329,8 +1329,22 @@ button { color: inherit; }
   min-height: 560px;
   overflow: hidden;
   padding: 0;
+  color: inherit;
   border-radius: 22px;
   box-shadow: var(--shadow);
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 260ms ease, transform 260ms ease;
+}
+
+.next-journey:hover {
+  box-shadow: 0 24px 64px rgba(20, 34, 45, .24);
+  transform: translateY(-3px);
+}
+
+.next-journey:focus-visible {
+  outline: 3px solid var(--sand);
+  outline-offset: 5px;
 }
 
 .next-main {
@@ -1405,8 +1419,24 @@ button { color: inherit; }
 }
 
 .next-link {
-  color: #fff;
-  border-bottom-color: rgba(255, 255, 255, .7);
+  width: fit-content;
+  margin-top: 24px;
+  padding: 11px 16px;
+  color: var(--navy);
+  background: var(--sand);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(4, 19, 34, .2);
+  font-size: .8rem;
+  letter-spacing: .02em;
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.next-journey:hover .next-link,
+.next-journey:focus-visible .next-link {
+  background: #ffd36a;
+  box-shadow: 0 10px 30px rgba(4, 19, 34, .28);
+  transform: translateX(3px);
 }
 
 .next-photo-link {
