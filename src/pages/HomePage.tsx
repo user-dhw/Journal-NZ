@@ -21,13 +21,12 @@ export function HomePage() {
 
   return (
     <>
-      <JournalHero />
+      <JournalHero featuredEntry={upcomingJourneys[0] ?? pastJourneys[0]} />
       <UpcomingJourneys entries={upcomingJourneys} />
       <section id="history" className="history-section">
         <div className="site-shell">
           <header className="home-section-header history-heading">
             <div>
-              <p className="section-number">02</p>
               <h2>{t.pastJourneys}</h2>
             </div>
             <div className="history-heading-copy">

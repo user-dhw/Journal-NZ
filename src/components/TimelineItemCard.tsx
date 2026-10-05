@@ -42,6 +42,7 @@ export function TimelineItemCard({ item }: { item: TimelineItem }) {
               className="details-toggle"
               onClick={() => setExpanded((value) => !value)}
               aria-expanded={expanded}
+              aria-label={expanded ? t.hideDetails : t.details}
             >
               <span>{expanded ? t.hideDetails : t.details}</span>
               <ChevronDown aria-hidden="true" size={17} className={expanded ? 'rotate-180' : ''} />

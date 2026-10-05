@@ -66,15 +66,6 @@ export function JournalDetailPage() {
   return (
     <article className="journal-detail-page">
       <header className="detail-hero">
-        {entry.coverImage && (
-          <JournalImage
-            src={entry.coverImage}
-            alt={getLocalizedText(entry.title, language)}
-            className="detail-cover-image"
-            loading="eager"
-          />
-        )}
-        <div className="detail-cover-shade" />
         <div className="site-shell detail-header-content">
           <Link className="back-link" to="/journal"><ArrowLeft aria-hidden="true" />{t.backToJournal}</Link>
           <div className="detail-title-copy">
@@ -86,6 +77,16 @@ export function JournalDetailPage() {
             {entry.subtitle && <p className="detail-subtitle">{getLocalizedText(entry.subtitle, language)}</p>}
           </div>
         </div>
+        {entry.coverImage && (
+          <div className="site-shell detail-cover-frame">
+            <JournalImage
+              src={entry.coverImage}
+              alt={getLocalizedText(entry.title, language)}
+              className="detail-cover-image"
+              loading="eager"
+            />
+          </div>
+        )}
       </header>
 
       <div className="site-shell detail-overview">

@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { siteConfig } from '../config/site'
 import { useLanguage } from '../hooks/useLanguage'
@@ -17,13 +17,12 @@ export function NextJourney({ entry }: { entry: JournalEntry }) {
     <Link className="next-journey" to={detailPath} aria-labelledby="next-journey-title">
       <div className="next-photo-link" aria-hidden="true">
         <JournalImage
-          src={siteConfig.heroImage}
+          src={entry.coverImage ?? entry.photos?.[0]?.src ?? siteConfig.heroImage}
           alt=""
           className="next-photo"
           loading="eager"
         />
       </div>
-      <div className="next-journey-shade" aria-hidden="true" />
       <div className="next-main">
         <div className="next-main-copy">
           <p className="next-label">{t.nextPlan}</p>
@@ -37,7 +36,6 @@ export function NextJourney({ entry }: { entry: JournalEntry }) {
             {language === 'zh' ? '查看旅程' : 'View journey'}<ArrowRight aria-hidden="true" size={17} />
           </span>
         </div>
-        <p className="next-photo-location"><MapPin aria-hidden="true" size={15} />Milford Sound · Aotearoa</p>
       </div>
     </Link>
   )

@@ -17,7 +17,6 @@ export function UpcomingJourneys({ entries }: { entries: JournalEntry[] }) {
     <section className="site-shell upcoming-section" aria-labelledby="upcoming-title">
       <header className="home-section-header">
         <div>
-          <p className="section-number">01</p>
           <h2 id="upcoming-title">{t.upcomingPlans}</h2>
         </div>
         <p>{t.upcomingPlansNote}</p>

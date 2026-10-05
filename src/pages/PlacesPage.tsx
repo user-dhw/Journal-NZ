@@ -17,7 +17,6 @@ export function PlacesPage() {
     <div className="page-body places-page">
       <header className="site-shell places-route-header">
         <div>
-          <p className="eyebrow">{t.places}</p>
           <h1>{t.places}</h1>
         </div>
         <p>{placeCount} {language === 'zh' ? '个停靠点' : placeCount === 1 ? 'stop' : 'stops'} · {journeys.length} {language === 'zh' ? '段旅程' : journeys.length === 1 ? 'journey' : 'journeys'}</p>

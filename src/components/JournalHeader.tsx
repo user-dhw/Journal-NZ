@@ -58,9 +58,8 @@ export function JournalHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
           <div className="site-shell">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <NavLink key={item.to} to={item.to} end={item.to === '/'} onClick={() => setOpen(false)}>
-                <span>0{index + 1}</span>
                 {t[item.label]}
               </NavLink>
             ))}
